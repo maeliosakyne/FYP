@@ -9,7 +9,7 @@
     android:padding="@dimen/fab_margin"
     android:paddingLeft="@dimen/fab_margin"
     android:paddingRight="@dimen/fab_margin"
-    tools:context=".MainActivity">
+    tools:context=".HomepageActivity">
 
     <TextView
         android:id="@+id/GetMovinLogoText"
