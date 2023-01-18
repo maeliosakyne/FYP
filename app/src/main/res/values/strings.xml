@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FYP App</string>
+    <string name="app_name">Get Movin\'</string>
     <string name="title_activity_main">MainActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -9,4 +9,18 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="practice_exercises">Practice Exercises</string>
+    <string name="introduction">Introduction</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum enim mauris, eget porta urna ullamcorper vitae. Vestibulum vestibulum enim mauris, eget porta urna ullamcorper vitae.</string>
+    <string name="back_button">Back Button</string>
+    <string name="app_logo">app logo</string>
+    <string name="start_button">start button</string>
+    <string name="achievements_button">Achievements Button</string>
+    <string name="getmovin">GetMovin\'</string>
+    <string name="completed_exercises_button">Completed Exercises</string>
+    <string name="app_logo_homepage">app logo</string>
+    <string name="achievements_text">Achievements</string>
+    <string name="practice_exercises_button">Practice Exercises</string>
+    <string name="how_to_use_the_app_button">How to use the app</string>
+    <string name="achievements_textmain">"Achievements "</string>
 </resources>
