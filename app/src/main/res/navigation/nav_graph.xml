@@ -17,9 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.fypapp.SecondFragment"
+        android:name="com.example.fypapp.CompletedExercisesFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_completed_exercises">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"

@@ -23,4 +23,12 @@
     <string name="practice_exercises_button">Practice Exercises</string>
     <string name="how_to_use_the_app_button">How to use the app</string>
     <string name="achievements_textmain">"Achievements "</string>
+    <string name="workout_1">Workout 1</string>
+    <string name="workout_2">Workout 2</string>
+    <string name="workout_4">Workout 4</string>
+    <string name="completed_exercises">Completed Exercises</string>
+    <string name="workout_3">Workout 3</string>
+    <string name="start_video_again">Start video again</string>
+    <string name="view_the_list_of_exercises_you_completed_this_week_below">View the list of exercises you completed this week below</string>
+    <string name="you_re_doing_great">You\'re doing great!</string>
 </resources>

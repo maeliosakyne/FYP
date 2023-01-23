@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PracticeExercisesFragment"
-    android:background="#333333" >
+    android:background="#333333"
+    tools:context=".PracticeExercisesFragment">
 
     <TextView
         android:id="@+id/pageTitle"
@@ -16,7 +16,7 @@
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="5"
-        android:text="@string/practice_exercises"
+        android:text="@string/completed_exercises"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -29,8 +29,8 @@
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="75dp"
         android:background="@null"
         android:contentDescription="@string/back_button"
         android:minHeight="48dp"
@@ -45,7 +45,7 @@
         android:layout_width="54dp"
         android:layout_height="42dp"
         android:layout_marginTop="70dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="25dp"
         android:contentDescription="@string/app_logo"
         android:src="@drawable/app_logo"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
@@ -56,7 +56,8 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="156dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="115dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -66,8 +67,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView1"
                 android:layout_width="411dp"
-                android:layout_height="201dp"
-                android:layout_marginTop="80dp"
+                android:layout_height="215dp"
+                android:layout_marginTop="170dp"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="0dp">
@@ -76,27 +77,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageButton
-                        android:id="@+id/videoOneStartButton"
-                        android:layout_width="113dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="210dp"
-                        android:layout_marginTop="7dp"
-                        android:contentDescription="@string/start_button"
-                        android:src="@drawable/start_button"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.289"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer1"
-                        app:layout_constraintVertical_bias="1.0"
-                        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
-
                     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                         android:id="@+id/youtubePlayer1"
                         android:layout_width="240dp"
                         android:layout_height="120dp"
-                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -110,28 +95,27 @@
                         android:id="@+id/videoTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginBottom="170dp"
+                        android:layout_marginBottom="14dp"
                         android:text="@string/introduction"
                         android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/youtubePlayer1"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/videoDescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="155dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="246dp"
-                        android:text="@string/lorem_ipsum"
-                        android:textSize="13.5sp"
+                    <ImageButton
+                        android:id="@+id/StartVideoAgain1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:background="@null"
+                        android:contentDescription="@string/start_video_again"
+                        android:minHeight="48dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/youtubePlayer1"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer1"
+                        app:srcCompat="@drawable/start_again_button" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -140,7 +124,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
                 android:layout_width="411dp"
-                android:layout_height="201dp"
+                android:layout_height="215dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -150,38 +134,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/videoTitle2"
+                    <ImageButton
+                        android:id="@+id/startVideoAgain2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginBottom="170dp"
-                        android:text="@string/workout_1"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/videoDescription2"
-                        android:layout_width="match_parent"
-                        android:layout_height="155dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="246dp"
-                        android:text="@string/lorem_ipsum"
-                        android:textSize="13.5sp"
+                        android:background="@null"
+                        android:contentDescription="@string/start_video_again"
+                        android:minHeight="48dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer1"
+                        app:srcCompat="@drawable/start_again_button" />
 
                     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                         android:id="@+id/youtubePlayer2"
                         android:layout_width="240dp"
                         android:layout_height="120dp"
-                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -191,19 +161,17 @@
 
                     </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
 
-                    <ImageButton
-                        android:id="@+id/videotwoStartButton"
-                        android:layout_width="113dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="180dp"
-                        android:layout_marginTop="7dp"
-                        android:contentDescription="@string/start_button"
-                        android:src="@drawable/start_button"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                    <TextView
+                        android:id="@+id/videoTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:text="@string/workout_1"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/youtubePlayer2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer2"
-                        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -212,7 +180,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView3"
                 android:layout_width="411dp"
-                android:layout_height="201dp"
+                android:layout_height="215dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -222,29 +190,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <ImageButton
+                        android:id="@+id/startVideoAgain3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@null"
+                        android:contentDescription="@string/start_video_again"
+                        android:minHeight="48dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer3"
+                        app:srcCompat="@drawable/start_again_button" />
+
                     <TextView
                         android:id="@+id/videoTitle3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginBottom="170dp"
+                        android:layout_marginBottom="14dp"
                         android:text="@string/workout_2"
                         android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/videoDescription3"
-                        android:layout_width="match_parent"
-                        android:layout_height="155dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="246dp"
-                        android:text="@string/lorem_ipsum"
-                        android:textSize="13.5sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/youtubePlayer3"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -252,7 +220,7 @@
                         android:id="@+id/youtubePlayer3"
                         android:layout_width="240dp"
                         android:layout_height="120dp"
-                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -262,20 +230,6 @@
 
                     </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
 
-                    <ImageButton
-                        android:id="@+id/videoThreeStartButton"
-                        android:layout_width="113dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="180dp"
-                        android:layout_marginTop="10dp"
-                        android:contentDescription="@string/start_button"
-                        android:src="@drawable/start_button"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer3"
-                        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
@@ -283,7 +237,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView4"
                 android:layout_width="411dp"
-                android:layout_height="201dp"
+                android:layout_height="215dp"
                 android:layout_marginTop="11dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -293,30 +247,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <ImageButton
+                        android:id="@+id/startVideoAgain4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@null"
+                        android:contentDescription="@string/start_video_again"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer4"
+                        app:srcCompat="@drawable/start_again_button" />
+
                     <TextView
                         android:id="@+id/videoTitle4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginBottom="170dp"
+                        android:layout_marginBottom="13dp"
                         android:text="@string/workout_3"
                         android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/videoDesription4"
-                        android:layout_width="match_parent"
-                        android:layout_height="155dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="246dp"
-                        android:text="@string/lorem_ipsum"
-                        android:textSize="13.5sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/youtubePlayer4"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -324,7 +276,7 @@
                         android:id="@+id/youtubePlayer4"
                         android:layout_width="240dp"
                         android:layout_height="120dp"
-                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -335,23 +287,43 @@
 
                     </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
 
-                    <ImageButton
-                        android:id="@+id/videoFourStartButton"
-                        android:layout_width="113dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="180dp"
-                        android:layout_marginTop="9dp"
-                        android:contentDescription="@string/start_button"
-                        android:src="@drawable/start_button"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer4"
-                        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="@string/you_re_doing_great"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="302dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="@string/view_the_list_of_exercises_you_completed_this_week_below"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
