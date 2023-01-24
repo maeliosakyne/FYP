@@ -27,10 +27,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/practiceExercisesButton"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginEnd="45dp"
         android:background="@color/orange"
         android:onClick="onClickPracticeExercises"
         android:padding="@dimen/fab_margin"
@@ -51,10 +49,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/completedExercisesButton"
-        android:layout_width="wrap_content"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="14dp"
         android:background="@color/green"
@@ -76,9 +74,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/howToUseTheAppButton"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
         android:layout_marginEnd="-20dp"
         android:layout_marginBottom="30dp"
         android:background="@color/blue"

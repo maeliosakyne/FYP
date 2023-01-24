@@ -107,7 +107,7 @@
                         android:id="@+id/StartVideoAgain1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginTop="3dp"
                         android:background="@null"
                         android:contentDescription="@string/start_video_again"
                         android:minHeight="48dp"
@@ -115,7 +115,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/youtubePlayer1"
-                        app:srcCompat="@drawable/start_again_button" />
+                        app:srcCompat="@drawable/start_again_button"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -138,13 +139,14 @@
                         android:id="@+id/startVideoAgain2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:background="@null"
                         android:contentDescription="@string/start_video_again"
                         android:minHeight="48dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer1"
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer2"
                         app:srcCompat="@drawable/start_again_button" />
 
                     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
