@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PracticeExercises"
+    android:background="#333333" >
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="83dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="26dp"
+        android:background="@null"
+        android:contentDescription="@string/back_button"
+        android:minHeight="48dp"
+        android:onClick="onClickBackToMain"
+        android:src="@drawable/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pageTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RedundantDescriptionCheck" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="@string/practice_exercises"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/subPageLogo"
+        android:layout_width="61dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/app_logo"
+        app:layout_constraintEnd_toStartOf="@+id/pageTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="411dp"
+        android:layout_height="616dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="411dp"
+                android:layout_height="201dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/completeBtn1"
+                        android:layout_width="113dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="210dp"
+                        android:layout_marginTop="7dp"
+                        android:contentDescription="@string/start_button"
+                        android:src="@drawable/start_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.289"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer1"
+                        app:layout_constraintVertical_bias="1.0"
+                        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+                    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                        android:id="@+id/youtubePlayer1"
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginBottom="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:videoId="xxzDtLqZBro">
+
+                    </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+                    <TextView
+                        android:id="@+id/videoTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="170dp"
+                        android:text="@string/introduction"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/videoDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="246dp"
+                        android:text="@string/lorem_ipsum"
+                        android:textSize="13.5sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/youtubePlayer1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="411dp"
+                android:layout_height="201dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/videoTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="170dp"
+                        android:text="@string/workout_1"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/videoDescription2"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="246dp"
+                        android:text="@string/lorem_ipsum"
+                        android:textSize="13.5sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                        android:id="@+id/youtubePlayer2"
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginBottom="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:videoId="gO74v4VnfX4">
+
+                    </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+                    <ImageButton
+                        android:id="@+id/videotwoStartButton"
+                        android:layout_width="113dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="180dp"
+                        android:layout_marginTop="7dp"
+                        android:contentDescription="@string/start_button"
+                        android:src="@drawable/start_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer2"
+                        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="411dp"
+                android:layout_height="201dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/videoTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="170dp"
+                        android:text="@string/workout_2"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/videoDescription3"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="246dp"
+                        android:text="@string/lorem_ipsum"
+                        android:textSize="13.5sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                        android:id="@+id/youtubePlayer3"
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginBottom="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:videoId="4iugjk9AbN8">
+
+                    </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+                    <ImageButton
+                        android:id="@+id/videoThreeStartButton"
+                        android:layout_width="113dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="180dp"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="@string/start_button"
+                        android:src="@drawable/start_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer3"
+                        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="411dp"
+                android:layout_height="201dp"
+                android:layout_marginTop="11dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/videoTitle4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="170dp"
+                        android:text="@string/workout_3"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/videoDesription4"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="246dp"
+                        android:text="@string/lorem_ipsum"
+                        android:textSize="13.5sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                        android:id="@+id/youtubePlayer4"
+                        android:layout_width="240dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginBottom="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:videoId="4iugjk9AbN8"
+                        tools:ignore="MissingConstraints">
+
+                    </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+                    <ImageButton
+                        android:id="@+id/videoFourStartButton"
+                        android:layout_width="113dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="180dp"
+                        android:layout_marginTop="9dp"
+                        android:contentDescription="@string/start_button"
+                        android:src="@drawable/start_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/youtubePlayer4"
+                        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
