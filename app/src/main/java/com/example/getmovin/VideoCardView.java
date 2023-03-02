@@ -5,6 +5,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.cardview.widget.CardView;
 
@@ -28,13 +29,12 @@ public class VideoCardView extends CardView {
     }
 
     private void init() {
-        @SuppressLint("WrongViewCast")
-        Button completeButton = findViewById(R.id.completeBtn1);
-        completeButton.setOnClickListener(view -> {
-            if (mListener != null) {
-                mListener.onComplete(VideoCardView.this);
-            }
-        });
+//      ImageButton completeButton = new ImageButton(getContext())
+//        ImageButton completeButton.setOnClickListener(view -> {
+//            if (mListener != null) {
+//                mListener.onComplete(VideoCardView.this);
+//            }
+//        });
     }
 
     public void setOnCompleteListener(OnCompleteListener listener) {
