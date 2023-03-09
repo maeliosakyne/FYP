@@ -1,4 +1,4 @@
-package com.example.getmovin;
+package com.example.fypapp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

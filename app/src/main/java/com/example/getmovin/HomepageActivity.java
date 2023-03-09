@@ -1,4 +1,4 @@
-package com.example.getmovin;
+package com.example.fypapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -45,4 +45,9 @@ public class HomepageActivity extends AppCompatActivity {
     public void Completed(View view) {
         startActivity(new Intent(HomepageActivity.this, CompletedExercises.class));
     }
+
+  public void achievementsClick(View view) {
+    Intent intent = new Intent(getApplicationContext(),AchievementsActivity.class);
+    startActivity(intent);
+  }
 }

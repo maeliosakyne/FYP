@@ -1,4 +1,4 @@
-package com.example.getmovin;
+package com.example.fypapp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,6 +24,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
@@ -36,11 +37,11 @@ public class PracticeExercises extends AppCompatActivity {
     CardView cardView2;
     CardView cardView3;
     CardView cardView4;
-
-  public static final String MyPREFERENCES = "CompletedVideoPrefs" ;
+    Calendar calender = Calendar.getInstance();
+    public static final String MyPREFERENCES = "CompletedVideoPrefs" ;
     SharedPreferences sharedpreferences;
-  SharedPreferences.Editor editor;
-  String[] videoIds;
+    SharedPreferences.Editor editor;
+    String[] videoIds;
   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +56,6 @@ public class PracticeExercises extends AppCompatActivity {
         cardView2 = findViewById(R.id.cardView2);
         cardView3 = findViewById(R.id.cardView3);
         cardView4 = findViewById(R.id.cardView4);
-
         editor = sharedpreferences.edit();
         checkVideosVisibility();
         youTubePlayerView.addYouTubePlayerListener(new YouTubePlayerListener() {
@@ -84,6 +84,7 @@ public class PracticeExercises extends AppCompatActivity {
                 editor.putString("videoIds", joined);
                 editor.apply();
               }
+             checkAchievements();
               //Intent
               finish();
               Intent intent = new Intent(getApplicationContext(),CompletedExercises.class);
@@ -157,6 +158,7 @@ public class PracticeExercises extends AppCompatActivity {
                 editor.putString("videoIds", joined);
                 editor.apply();
               }
+              checkAchievements();
               //Intent
               finish();
               Intent intent = new Intent(getApplicationContext(),CompletedExercises.class);
@@ -230,6 +232,7 @@ public class PracticeExercises extends AppCompatActivity {
                 editor.putString("videoIds", joined);
                 editor.apply();
               }
+              checkAchievements();
               //Intent
               finish();
               Intent intent = new Intent(getApplicationContext(),CompletedExercises.class);
@@ -303,10 +306,12 @@ public class PracticeExercises extends AppCompatActivity {
                 editor.putString("videoIds", joined);
                 editor.apply();
               }
+              checkAchievements();
               //Intent
               finish();
               Intent intent = new Intent(getApplicationContext(),CompletedExercises.class);
               startActivity(intent);
+
             }
           }
 
@@ -352,7 +357,128 @@ public class PracticeExercises extends AppCompatActivity {
         });
 
     }
-    void checkVideosVisibility()
+
+  private void checkAchievements() {
+    if (!sharedpreferences.getBoolean("firstAchievementUnlock", false)) {
+      editor.putBoolean("firstAchievementUnlock", true);
+      editor.apply();
+    }
+//    Calendar calender = Calendar.getInstance();
+//    String joined_week = sharedpreferences.getString("weeksNumber", "");
+//    if(joined_week.isEmpty())
+//    {
+//      List<String> list = new ArrayList<String>();
+//      list.add(String.valueOf(calender.get(Calendar.WEEK_OF_YEAR)));
+//      joined_week = String.join(",", list);
+//      editor.putString("weeksNumber", joined_week);
+//      editor.apply();
+//    }
+//    else {
+//      List<String> list = new ArrayList<String>(Arrays.asList(joined_week.split(",")));// convert back to list of strings
+//      for(int i=0;i<list.size();i++) {
+//        if (calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(list.get(i))) {
+//          if (!sharedpreferences.getBoolean("secondAchievementUnlock", false)) {
+//            editor.putBoolean("secondAchievementUnlock", true);
+//            editor.apply();
+//          }
+//        }
+
+    // Achievement 2: First week of exercises
+    if (sharedpreferences.contains("weeksNumber")) {
+      List<String> weekList = Arrays.asList(sharedpreferences.getString("weeksNumber", "").split(","));
+      if (weekList.size() >= 2 && calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(weekList.get(weekList.size() - 1))) {
+        // User completed first week of exercises
+        if (!sharedpreferences.getBoolean("secondAchievementUnlock", false)) {
+          // Unlock Achievement 2
+          SharedPreferences.Editor editor = sharedpreferences.edit();
+          editor.putBoolean("secondAchievementUnlock", true);
+          editor.apply();
+        }
+      }
+    }
+
+
+    // Achievement 3, 4 and 5: Consecutive weeks of exercises
+    if (sharedpreferences.contains("weeksNumber")) {
+      List<String> weekList = Arrays.asList(sharedpreferences.getString("weeksNumber", "").split(","));
+      if (weekList.size() >= 2) {
+        boolean consecutiveWeeks = true;
+        for (int i = 1; i < weekList.size(); i++) {
+          if (Integer.parseInt(weekList.get(i)) != Integer.parseInt(weekList.get(i - 1)) + 1) {
+            consecutiveWeeks = false;
+            break;
+          }
+        }
+        if (consecutiveWeeks) {
+          // User has been practicing for 2 or more consecutive weeks
+          if (!sharedpreferences.getBoolean("thirdAchievementUnlock", false)) {
+            // Unlock Achievement 3
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putBoolean("thirdAchievementUnlock", true);
+            editor.apply();
+          }
+          if (weekList.size() >= 4 && calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(weekList.get(weekList.size() - 1))) {
+            // User has been practicing for over a month
+            if (!sharedpreferences.getBoolean("forthAchievementUnlock", false)) {
+              // Unlock Achievement 4
+              SharedPreferences.Editor editor = sharedpreferences.edit();
+              editor.putBoolean("forthAchievementUnlock", true);
+              editor.apply();
+            }
+            if (weekList.size() >= 8 && calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(weekList.get(weekList.size() - 1))) {
+              // User has been practicing for over two months
+              if (!sharedpreferences.getBoolean("fifthAchievementUnlock", false)) {
+                // Unlock Achievement 5
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putBoolean("fifthAchievementUnlock", true);
+                editor.apply();
+              }
+            }
+          }
+        }
+      }
+
+//
+//        if (calender.get(Calendar.WEEK_OF_YEAR) - 1 == Integer.parseInt(list.get(i))) {
+//          int con = sharedpreferences.getInt("consecutive", 0);
+//          editor.putInt("consecutive", con + 1);
+//          editor.apply();
+//                    if(!sharedpreferences.getBoolean("thirdAchievementUnlock",false)) {
+//                      editor.putBoolean("thirdAchievementUnlock", true);
+//                      editor.apply();
+//                    }
+//                    if(i>=2)
+//                    {
+//                      if(calender.get(Calendar.WEEK_OF_YEAR)-2==Integer.parseInt(list.get(i-2)))
+//                      {
+//                        if(i>=3)
+//                        {
+//                          if(calender.get(Calendar.WEEK_OF_YEAR)-3==Integer.parseInt(list.get(i-3)))
+//                          {
+//                            if(!sharedpreferences.getBoolean("forthAchievementUnlock",false)) {
+//                              editor.putBoolean("forthAchievementUnlock", true);
+//                              editor.apply();
+//                            }
+//                          }
+//                        }
+//                      }
+//                    }
+//        }
+//        if (calender.get(Calendar.WEEK_OF_YEAR) - 1 != Integer.parseInt(list.get(i)))
+//        {
+//          editor.putInt("consecutive", 0);
+//          editor.apply();
+//        }
+//      }
+//      list.add(String.valueOf(calender.get(Calendar.WEEK_OF_YEAR)));
+//      joined_week = String.join(",", list);
+//      editor.putString("weeksNumber", joined_week);
+//      editor.apply();
+//    }
+    }
+  }
+
+  void checkVideosVisibility()
     {
       String joined = sharedpreferences.getString("videoIds", "");// retrieve the joined string
       List<String> list = new ArrayList<String>(Arrays.asList(joined.split(","))); // convert back to list of strings

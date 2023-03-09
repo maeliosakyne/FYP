@@ -1,4 +1,4 @@
-package com.example.getmovin;
+package com.example.fypapp;
 
 public class YouTubeVideo {
 

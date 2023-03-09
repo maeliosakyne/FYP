@@ -106,7 +106,7 @@
         app:srcCompat="@drawable/app_logo" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/achivementsBtn"
         android:layout_width="227dp"
         android:layout_height="199dp"
         android:layout_marginTop="16dp"
@@ -119,6 +119,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/GetMovinLogoText"
         app:srcCompat="@drawable/achievments_icon"
+        android:onClick="achievementsClick"
         tools:ignore="RedundantDescriptionCheck" />
 
     <TextView

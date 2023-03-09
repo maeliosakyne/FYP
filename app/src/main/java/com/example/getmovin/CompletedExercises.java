@@ -1,10 +1,12 @@
-package com.example.getmovin;
+package com.example.fypapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,6 +24,7 @@ import java.util.List;
 
 public class CompletedExercises extends AppCompatActivity {
    SharedPreferences sharedpreferences;
+   ImageButton back_btn;
    int position = 0;
    public static final String MyPREFERENCES = "CompletedVideoPrefs" ;
         @Override
@@ -30,6 +33,13 @@ public class CompletedExercises extends AppCompatActivity {
           setContentView(R.layout.completed_activity);
           LayoutInflater inflater = getLayoutInflater();
           LinearLayoutCompat parentPanel = findViewById(R.id.row_linear_layout);
+          back_btn = findViewById(R.id.backButton);
+          back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              finish();
+            }
+          });
           parentPanel.removeAllViews();
           parentPanel.setOrientation(LinearLayoutCompat.VERTICAL);
           sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
@@ -97,10 +107,6 @@ public class CompletedExercises extends AppCompatActivity {
             }
           }
         }
-
-    public void onClickBackToMain(View view){
-        finish();
-    }
 }
 
 
