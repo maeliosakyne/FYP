@@ -1,4 +1,4 @@
-package com.example.fypapp;
+package com.example.getmovin;
 
 import org.junit.Test;
 

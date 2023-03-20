@@ -1,11 +1,7 @@
 package com.example.getmovin;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.cardview.widget.CardView;
 
