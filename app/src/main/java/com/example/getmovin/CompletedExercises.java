@@ -49,7 +49,7 @@ public class CompletedExercises extends AppCompatActivity {
               position = i;
               View item = inflater.inflate(R.layout.row_layout, null);
               TextView videoTitleTxt = item.findViewById(R.id.videoTitle);
-              videoTitleTxt.setText(new StringBuilder().append("WorkOut ").append(i + 1).toString());
+              videoTitleTxt.setText(new StringBuilder().append("Workout ").append(i + 1).toString());
               YouTubePlayerView youTubePlayerView = item.findViewById(R.id.youtubePlayer_row);
               youTubePlayerView.addYouTubePlayerListener(new YouTubePlayerListener() {
                 @Override

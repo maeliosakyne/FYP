@@ -7,156 +7,285 @@
     tools:context=".HelpActivity"
     android:background="#333333" >
 
-    <TextView
-        android:id="@+id/pageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:shadowColor="#000000"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="5"
-        android:text="FAQ"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/backButton"
-        android:layout_width="84dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:background="@null"
-        android:contentDescription="@string/back_button"
-        android:minHeight="48dp"
-        android:onClick="onClickBackToMain"
-        android:src="@drawable/back_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pageTitle"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="RedundantDescriptionCheck" />
-
-    <ImageView
-        android:id="@+id/subPageLogo"
-        android:layout_width="68dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
-        android:contentDescription="@string/app_logo"
-        android:src="@drawable/app_logo"
-        app:layout_constraintEnd_toStartOf="@+id/pageTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="wrap_content">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#333333">
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="380dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Q: After I finish watching a video, where does it go?"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="483dp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Q: How do I watch an exercise video?"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteX="4dp"
-                    tools:layout_editor_absoluteY="170dp" />
+                    <ImageButton
+                        android:id="@+id/backButton4"
+                        android:layout_width="84dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="320dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:contentDescription="@string/back_button"
+                        android:minHeight="48dp"
+                        android:onClick="onClickBackToMain"
+                        android:src="@drawable/back_button"
+                        app:layout_constraintBottom_toTopOf="@+id/pageTitle4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:ignore="RedundantDescriptionCheck" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:text="A: To watch an exercise video, first tap the ‘back’ button in the top right hand corner of this screen. This will bring you back to the home screen. Next, tap the orange ‘practice exercises’ button, you will then be brought to a screen with a list of different exercise videos. To start watching a video, just click the play button on the video you would like to watch. You can then pause the video or switch to full screen, just like a regular YouTube video!"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="204dp" />
+                    <TextView
+                        android:id="@+id/pageTitle4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="180dp"
+                        android:shadowColor="#000000"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="5"
+                        android:text="FAQ"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="30dp" />
 
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:text="A: When you finish watching a video on the ‘practice exercises’ screen, it be removed from the screen and instead it will be added to your ‘completed exercises’ screen. This is done so that you can keep track of your weekly progress. To view your ‘completed exercises’ screen, tap the ‘back’ button in the top right-hand corner of this screen. This will bring you back to the home screen. Next, tap the green ‘completed exercises’ button. You will then be brought to a screen where you can see a list of the exercise videos you have watched and completed that week. At the beginning of each week, this screen is cleared, and you begin again."
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="546dp" />
+                    <ImageView
+                        android:id="@+id/subPageLogo4"
+                        android:layout_width="68dp"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@string/app_logo"
+                        android:src="@drawable/app_logo"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="380dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Q: What are the achievements for, and how do I see my achievements?"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="920dp" />
+            </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:text="A: The achievements section of the app is where you can view in-app trophies you have received to mark you exercises milestones. For example, you will receive a new achievement trophy for completing your first week of exercises, and another one after completing your first month of exercises. Achievements are there to motivate you to keep going and working Hard! To find your achievements tap the ‘back’ button in the top right-hand corner of this screen. This will bring you back to the home screen. Next, tap the ‘achievements’ text, or the trophy image, to be taken to your achievements screen. Here you can view a list of your achievements to date, come back regularly to see how you are doing!"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="982dp" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="411dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="80dp"
+                app:cardBackgroundColor="#474545"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp">
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:shadowColor="#FFFFFF"
-                    android:text="KEEP SCROLLING DOWN TO VIEW MORE QUESTIONS "
-                    android:textAlignment="center"
-                    android:textColor="#E55014"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="96dp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/videoTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="170dp"
+                        android:text="Q: How do I watch an exercise video?"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/videoDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:text="To watch an exercise video, first tap the ‘back’ button in the top right hand corner of this screen. This will bring you back to the home screen. Next, tap the orange ‘practice exercises’ button, you will then be brought to a screen with a list of different exercise videos. To start watching a video, just click the play button on the video you would like to watch. You can then pause the video or switch to full screen, just like a regular YouTube video!"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/videoTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="411dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#474545"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/videoTitle2"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="170dp"
+                        android:text="Q: After I finish watching a video, where does it go?"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.066" />
+
+                    <TextView
+                        android:id="@+id/videoDescription2"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:text="When you finish watching a video on the ‘practice exercises’ screen, it be removed from the screen and instead it will be added to your ‘completed exercises’ screen. This is done so that you can keep track of your weekly progress. To view your ‘completed exercises’ screen, tap the ‘back’ button in the top right-hand corner of this screen. This will bring you back to the home screen. Next, tap the green ‘completed exercises’ button. You will then be brought to a screen where you can see a list of the exercise videos you have watched and completed that week. At the beginning of each week, this screen is cleared, and you begin again."
+                        android:textColor="#FFFFFF"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.771" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="411dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#474545"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/videoTitle3"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="170dp"
+                        android:text="Q: What are the achievements for, and how do I see my achievements?"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/videoDescription3"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+                        android:text="The achievements section of the app is where you can view in-app trophies you have received to mark you exercises milestones. For example, you will receive a new achievement trophy for completing your first week of exercises, and another one after completing your first month of exercises. Achievements are there to motivate you to keep going and working Hard! To find your achievements tap the ‘back’ button in the top right-hand corner of this screen. This will bring you back to the home screen. Next, tap the ‘achievements’ text, or the trophy image, to be taken to your achievements screen. Here you can view a list of your achievements to date, come back regularly to see how you are doing!"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.847" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="411dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="11dp"
+                app:cardBackgroundColor="#474545"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/videoDesription4"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:text="There are many reasons why you should keep doing these exercises. The biggest reason to continue is to prevent falls as you get older. The stronger you are and better your balance is as you get older, the less likely you are to fall and injure yourself. This isn’t the only benefit, exercise is good for your mental health too, it can help relieve stress and release endorphins into your brain, which are the chemicals that make you feel happy. These exercises will also increase your overall level of fitness, so you will stay fit and healthy!"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.786" />
+
+                    <TextView
+                        android:id="@+id/videoTitle5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="170dp"
+                        android:text="Q: Why should I continue to do these exercises?"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.333" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
