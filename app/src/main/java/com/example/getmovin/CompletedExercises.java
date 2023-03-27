@@ -32,7 +32,7 @@ public class CompletedExercises extends AppCompatActivity {
           setContentView(R.layout.completed_activity);
           LayoutInflater inflater = getLayoutInflater();
           LinearLayoutCompat parentPanel = findViewById(R.id.row_linear_layout);
-          back_btn = findViewById(R.id.backButton);
+          back_btn = findViewById(R.id.backButton4);
           back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
