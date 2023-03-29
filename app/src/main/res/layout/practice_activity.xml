@@ -19,8 +19,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#333333"
-                app:layout_constraintTop_toTopOf="parent">
+                app:cardBackgroundColor="#333333">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -50,18 +49,17 @@
                         android:id="@+id/pageTitle4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="100dp"
                         android:layout_marginTop="30dp"
-                        android:layout_marginEnd="21dp"
+                        android:layout_marginEnd="10dp"
                         android:shadowColor="#000000"
                         android:shadowDx="5"
                         android:shadowDy="5"
                         android:shadowRadius="5"
-                        android:text="@string/practice_exercises"
+                        android:text="Practice Exercises"
                         android:textColor="#FFFFFF"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/backButton4"
+                        app:layout_constraintEnd_toEndOf="@+id/backButton4"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,7 +70,6 @@
                         android:layout_marginTop="20dp"
                         android:contentDescription="@string/app_logo"
                         android:src="@drawable/app_logo"
-                        app:layout_constraintEnd_toStartOf="@+id/pageTitle4"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -84,7 +81,8 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-16dp">
 
@@ -97,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
                 app:cardBackgroundColor="#474545"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:layout_marginTop="1dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="280dp"
                         android:text="@string/workout_1"
                         android:textColor="#FFFFFF"
@@ -146,10 +144,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="155dp"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="30dp"
                         android:layout_marginEnd="270dp"
                         android:layout_marginBottom="46dp"
-                        android:text="Start with Otago Workout #1. Use this video three times this week and progress to Otago Workout #2."
+                        android:text="Use this video three times this week and progress to Otago Workout #2."
                         android:textColor="#FFFFFF"
                         android:textSize="13.5sp"
                         android:textStyle="bold"
@@ -305,7 +302,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView4"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="11dp"
                 android:layout_marginEnd="10dp"
