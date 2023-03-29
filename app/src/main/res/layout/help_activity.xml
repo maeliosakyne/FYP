@@ -31,7 +31,7 @@
                         android:id="@+id/backButton4"
                         android:layout_width="84dp"
                         android:layout_height="52dp"
-                        android:layout_marginStart="320dp"
+                        android:layout_marginStart="275dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
                         android:background="@null"
@@ -51,7 +51,7 @@
                         android:id="@+id/pageTitle4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="180dp"
+                        android:layout_marginTop="30dp"
                         android:shadowColor="#000000"
                         android:shadowDx="5"
                         android:shadowDy="5"
@@ -60,8 +60,9 @@
                         android:textColor="#FFFFFF"
                         android:textSize="24sp"
                         android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/backButton4"
                         app:layout_constraintStart_toStartOf="parent"
-                        tools:layout_editor_absoluteY="30dp" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/subPageLogo4"
@@ -78,7 +79,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView1"
                 android:layout_width="411dp"
-                android:layout_height="200dp"
+                android:layout_height="230dp"
                 android:layout_marginTop="80dp"
                 app:cardBackgroundColor="#474545"
                 app:layout_constraintTop_toTopOf="parent"
@@ -90,10 +91,10 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/videoTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
+                        android:id="@+id/videoTitle4"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="40dp"
                         android:layout_marginBottom="170dp"
@@ -102,24 +103,28 @@
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.066" />
 
                     <TextView
-                        android:id="@+id/videoDescription"
+                        android:id="@+id/videoDescription4"
                         android:layout_width="match_parent"
-                        android:layout_height="155dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="40dp"
+                        android:layout_height="140dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="50dp"
                         android:text="To watch an exercise video, first tap the ‘back’ button in the top right hand corner of this screen. This will bring you back to the home screen. Next, tap the orange ‘practice exercises’ button, you will then be brought to a screen with a list of different exercise videos. To start watching a video, just click the play button on the video you would like to watch. You can then pause the video or switch to full screen, just like a regular YouTube video!"
                         android:textColor="#FFFFFF"
                         android:textSize="13.5sp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/videoTitle" />
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.542" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>

@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CompletedExercises extends AppCompatActivity {
+  //Initializing widgets
    SharedPreferences sharedpreferences;
    ImageButton back_btn;
    int position = 0;
@@ -33,12 +34,15 @@ public class CompletedExercises extends AppCompatActivity {
           LayoutInflater inflater = getLayoutInflater();
           LinearLayoutCompat parentPanel = findViewById(R.id.row_linear_layout);
           back_btn = findViewById(R.id.backButton4);
+          //Back button listener
           back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
               finish();
             }
+            //Finish the activity of back button click
           });
+
           parentPanel.removeAllViews();
           parentPanel.setOrientation(LinearLayoutCompat.VERTICAL);
           sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);

@@ -58,7 +58,7 @@ public class AchievementsActivity extends AppCompatActivity {
           View item = inflater.inflate(R.layout.row_achivement_lyt, null);
           ImageView imageView = item.findViewById(R.id.trophy_icon);
           TextView textView= item.findViewById(R.id.leve_txt);
-          textView.setText("You Completed Your First Week Of Exercises! Good Job!");
+          textView.setText("You Completed Your First Week Of Exercises!");
           imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(),R.drawable.trophy2,getTheme()));
           parentPanel.addView(item);
         }
