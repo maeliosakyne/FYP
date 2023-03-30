@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class PracticeExercises extends AppCompatActivity {
+    //Initializing the widgets
     YouTubePlayerView youTubePlayerView;
     YouTubePlayerView youTubePlayerView2;
     YouTubePlayerView youTubePlayerView3;
@@ -39,6 +40,8 @@ public class PracticeExercises extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.practice_activity);
+
+        //Initializing shared preference
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         videoIds = new String[]{"xxzDtLqZBro", "gO74v4VnfX4", "4iugjk9AbN8", "4iugjk9AbN8"};
         youTubePlayerView = findViewById(R.id.youtubePlayer1);
@@ -50,11 +53,15 @@ public class PracticeExercises extends AppCompatActivity {
         cardView3 = findViewById(R.id.cardView3);
         cardView4 = findViewById(R.id.cardView4);
         editor = sharedpreferences.edit();
+
+        //Function to check that if videos are in completed videos then not shown in practice video list
         checkVideosVisibility();
+
+        //Youtube Video Player 1 listener
         youTubePlayerView.addYouTubePlayerListener(new YouTubePlayerListener() {
           @Override
           public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-
+          //If the state of video is ended(Video is shown completely then store its video id in shared preference
           }
 
           @Override
@@ -64,6 +71,7 @@ public class PracticeExercises extends AppCompatActivity {
               String joined = sharedpreferences.getString("videoIds", "");
               if(joined.isEmpty())
               {
+                //If the list of completed list in shared preference is empty
                 List<String> list = new ArrayList<String>();
                 list.add(videoIds[0]);
                 joined = String.join(",", list);
@@ -71,12 +79,15 @@ public class PracticeExercises extends AppCompatActivity {
                 editor.apply();
               }
               else {
+                //If the list of completed list in shared preference is not empty then
+                // first get the list and then add new video id and then store the updated list in shared preference
                 List<String> list = new ArrayList<String>(Arrays.asList(joined.split(","))); // convert back to list of strings
                 list.add(videoIds[0]);
                 joined = String.join(",", list);
                 editor.putString("videoIds", joined);
                 editor.apply();
               }
+              //Function to check achievements
              checkAchievements();
               //Intent
               finish();
@@ -125,6 +136,7 @@ public class PracticeExercises extends AppCompatActivity {
 
           }
         });
+        //Youtube Video Player 2 listener
         youTubePlayerView2.addYouTubePlayerListener(new YouTubePlayerListener() {
           @Override
           public void onReady(@NonNull YouTubePlayer youTubePlayer) {
@@ -199,6 +211,7 @@ public class PracticeExercises extends AppCompatActivity {
 
           }
         });
+        //Youtube Video Player 3 listener
         youTubePlayerView3.addYouTubePlayerListener(new YouTubePlayerListener() {
           @Override
           public void onReady(@NonNull YouTubePlayer youTubePlayer) {
@@ -273,6 +286,8 @@ public class PracticeExercises extends AppCompatActivity {
 
           }
         });
+
+        //Youtube Video Player 4 listener
         youTubePlayerView4.addYouTubePlayerListener(new YouTubePlayerListener() {
           @Override
           public void onReady(@NonNull YouTubePlayer youTubePlayer) {
@@ -352,29 +367,11 @@ public class PracticeExercises extends AppCompatActivity {
     }
 
   private void checkAchievements() {
+    //Achievement 1: Shown first video will be unlocked
     if (!sharedpreferences.getBoolean("firstAchievementUnlock", false)) {
       editor.putBoolean("firstAchievementUnlock", true);
       editor.apply();
     }
-//    Calendar calender = Calendar.getInstance();
-//    String joined_week = sharedpreferences.getString("weeksNumber", "");
-//    if(joined_week.isEmpty())
-//    {
-//      List<String> list = new ArrayList<String>();
-//      list.add(String.valueOf(calender.get(Calendar.WEEK_OF_YEAR)));
-//      joined_week = String.join(",", list);
-//      editor.putString("weeksNumber", joined_week);
-//      editor.apply();
-//    }
-//    else {
-//      List<String> list = new ArrayList<String>(Arrays.asList(joined_week.split(",")));// convert back to list of strings
-//      for(int i=0;i<list.size();i++) {
-//        if (calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(list.get(i))) {
-//          if (!sharedpreferences.getBoolean("secondAchievementUnlock", false)) {
-//            editor.putBoolean("secondAchievementUnlock", true);
-//            editor.apply();
-//          }
-//        }
 
     // Achievement 2: First week of exercises
     if (sharedpreferences.contains("weeksNumber")) {
@@ -430,47 +427,10 @@ public class PracticeExercises extends AppCompatActivity {
           }
         }
       }
-
-//
-//        if (calender.get(Calendar.WEEK_OF_YEAR) - 1 == Integer.parseInt(list.get(i))) {
-//          int con = sharedpreferences.getInt("consecutive", 0);
-//          editor.putInt("consecutive", con + 1);
-//          editor.apply();
-//                    if(!sharedpreferences.getBoolean("thirdAchievementUnlock",false)) {
-//                      editor.putBoolean("thirdAchievementUnlock", true);
-//                      editor.apply();
-//                    }
-//                    if(i>=2)
-//                    {
-//                      if(calender.get(Calendar.WEEK_OF_YEAR)-2==Integer.parseInt(list.get(i-2)))
-//                      {
-//                        if(i>=3)
-//                        {
-//                          if(calender.get(Calendar.WEEK_OF_YEAR)-3==Integer.parseInt(list.get(i-3)))
-//                          {
-//                            if(!sharedpreferences.getBoolean("forthAchievementUnlock",false)) {
-//                              editor.putBoolean("forthAchievementUnlock", true);
-//                              editor.apply();
-//                            }
-//                          }
-//                        }
-//                      }
-//                    }
-//        }
-//        if (calender.get(Calendar.WEEK_OF_YEAR) - 1 != Integer.parseInt(list.get(i)))
-//        {
-//          editor.putInt("consecutive", 0);
-//          editor.apply();
-//        }
-//      }
-//      list.add(String.valueOf(calender.get(Calendar.WEEK_OF_YEAR)));
-//      joined_week = String.join(",", list);
-//      editor.putString("weeksNumber", joined_week);
-//      editor.apply();
-//    }
     }
   }
 
+  //Check Videos Availability
   void checkVideosVisibility()
     {
       String joined = sharedpreferences.getString("videoIds", "");// retrieve the joined string

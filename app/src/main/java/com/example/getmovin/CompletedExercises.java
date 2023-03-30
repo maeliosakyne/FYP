@@ -43,21 +43,34 @@ public class CompletedExercises extends AppCompatActivity {
             //Finish the activity of back button click
           });
 
+          //Remove all views in
           parentPanel.removeAllViews();
+
+          //Set orientation to be vertical
           parentPanel.setOrientation(LinearLayoutCompat.VERTICAL);
+
+          //Getting video ids of completed videos from shared preference
           sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
           String joined = sharedpreferences.getString("videoIds", "");// retrieve the joined string
+          //If the list of completed videos is not empty
           if(!joined.isEmpty()) {
             List<String> list = new ArrayList<>(Arrays.asList(joined.split(",")));
+            //For Loop till the videos ids in completed video list get form shared preference
             for (int i = 0; i < list.size(); i++) {
               position = i;
+              //Inflate the row_layout
               View item = inflater.inflate(R.layout.row_layout, null);
+              //Setting the video title in row_layout
               TextView videoTitleTxt = item.findViewById(R.id.videoTitle);
               videoTitleTxt.setText(new StringBuilder().append("Workout ").append(i + 1).toString());
+
+              //Setting up Youtube listener
               YouTubePlayerView youTubePlayerView = item.findViewById(R.id.youtubePlayer_row);
               youTubePlayerView.addYouTubePlayerListener(new YouTubePlayerListener() {
                 @Override
                 public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                  //setting the video id in youtube video player
                   youTubePlayer.cueVideo(list.get(position), 0);
                 }
 
@@ -106,6 +119,7 @@ public class CompletedExercises extends AppCompatActivity {
 
                 }
               });
+              //Add the view
               parentPanel.addView(item);
             }
           }

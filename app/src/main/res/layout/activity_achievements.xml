@@ -1,25 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#333333"
     android:orientation="vertical"
-    tools:context=".AchievementsActivity">
+    tools:context=".CompletedExercises"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-      android:layout_width="match_parent"
-      android:textSize="20dp"
-      android:textAlignment="center"
-      android:layout_marginTop="20dp"
-      android:text="Achievements Unlocked"
-      android:drawableRight="@drawable/trophy"
-      android:paddingRight="35dp"
-      android:gravity="center"
-      android:textColor="#fff"
-      android:layout_height="wrap_content">
-    </TextView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#333333">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/subPageLogo4"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_logo"
+                android:src="@drawable/app_logo" />
+
+            <TextView
+                android:id="@+id/pageTitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="38dp"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:contentDescription="@string/completed_exercises"
+                android:shadowRadius="5"
+                android:text="Achievements"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/backButton5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="40dp"
+                android:background="@null"
+                android:contentDescription="@string/back_button"
+                android:minHeight="48dp"
+                android:layout_gravity="center"
+                android:onClick="onClickBackToMain"
+                android:src="@drawable/back_button" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
 
     <ScrollView
       android:layout_width="match_parent"
