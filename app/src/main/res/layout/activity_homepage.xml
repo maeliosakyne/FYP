@@ -35,7 +35,7 @@
                     android:text="@string/getmovin"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="50sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     app:drawableRightCompat="@drawable/app_logo" />
 
@@ -70,6 +70,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="52dp"
                 android:contentDescription="@string/achievements_textmain"
+                android:onClick="achievementsClick"
                 android:text="@string/achievements_text"
                 android:textColor="#FFFFFF"
                 android:textSize="28sp"
@@ -79,7 +80,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/practiceExercisesButton"
-                android:layout_width="379dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:background="@color/orange"
@@ -94,7 +95,7 @@
                 android:text="@string/practice_exercises_button"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
-                android:textSize="34sp" />
+                android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/completedExercisesButton"
