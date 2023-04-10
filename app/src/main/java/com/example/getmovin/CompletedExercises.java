@@ -56,7 +56,7 @@ public class CompletedExercises extends AppCompatActivity {
           //If the list of completed videos is not empty
           if(!joined.isEmpty()) {
             List<String> list = new ArrayList<>(Arrays.asList(joined.split(",")));
-            //For Loop till the videos ids in completed video list get form shared preference
+            //For Loop till the video ids in the completed video list gotten from shared preference
             for (int i = 0; i < list.size(); i++) {
               position = i;
               //Inflate the row_layout

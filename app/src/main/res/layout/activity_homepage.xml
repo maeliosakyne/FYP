@@ -31,11 +31,11 @@
                     android:id="@+id/GetMovinLogoText"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="18dp"
                     android:text="@string/getmovin"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="40sp"
+                    android:textSize="34sp"
                     android:textStyle="bold"
                     app:drawableRightCompat="@drawable/app_logo" />
 
@@ -114,7 +114,7 @@
                 android:text="@string/completed_exercises_button"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
-                android:textSize="34sp" />
+                android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/howToUseTheAppButton"

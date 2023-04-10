@@ -61,7 +61,7 @@ public class PracticeExercises extends AppCompatActivity {
         youTubePlayerView.addYouTubePlayerListener(new YouTubePlayerListener() {
           @Override
           public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-          //If the state of video is ended(Video is shown completely then store its video id in shared preference
+          //If Video is shown completely then store its video id in shared preference
           }
 
           @Override
@@ -79,7 +79,7 @@ public class PracticeExercises extends AppCompatActivity {
                 editor.apply();
               }
               else {
-                //If the list of completed list in shared preference is not empty then
+                //If the list of completed exercises in shared preference is not empty then
                 // first get the list and then add new video id and then store the updated list in shared preference
                 List<String> list = new ArrayList<String>(Arrays.asList(joined.split(","))); // convert back to list of strings
                 list.add(videoIds[0]);
@@ -367,13 +367,13 @@ public class PracticeExercises extends AppCompatActivity {
     }
 
   private void checkAchievements() {
-    //Achievement 1: Shown first video will be unlocked
+    //Achievement 1 will be unlocked when first video is watched
     if (!sharedpreferences.getBoolean("firstAchievementUnlock", false)) {
       editor.putBoolean("firstAchievementUnlock", true);
       editor.apply();
     }
 
-    // Achievement 2: First week of exercises
+    // Achievement 2: First week of exercises completed
     if (sharedpreferences.contains("weeksNumber")) {
       List<String> weekList = Arrays.asList(sharedpreferences.getString("weeksNumber", "").split(","));
       if (weekList.size() >= 2 && calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(weekList.get(weekList.size() - 1))) {
