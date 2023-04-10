@@ -17,7 +17,6 @@ public class AchievementsActivity extends AppCompatActivity {
     //Initializing the widgets
     SharedPreferences sharedpreferences;
     ImageButton back_btn;
-    int position = 0;
     public static final String MyPREFERENCES = "CompletedVideoPrefs" ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,73 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PracticeExercises"
-    android:background="#333333" >
+    android:background="#333333"
+    tools:context=".PracticeExercises">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="#333333"
-        tools:ignore="MissingConstraints">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#333333"
+            tools:ignore="MissingConstraints">
 
-                    <ImageButton
-                        android:id="@+id/backButton4"
-                        android:layout_width="84dp"
-                        android:layout_height="52dp"
-                        android:layout_marginStart="280dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@null"
-                        android:contentDescription="@string/back_button"
-                        android:minHeight="48dp"
-                        android:onClick="onClickBackToMain"
-                        android:src="@drawable/back_button"
-                        app:layout_constraintBottom_toTopOf="@+id/pageTitle4"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0"
-                        tools:ignore="RedundantDescriptionCheck" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/pageTitle4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginEnd="10dp"
-                        android:shadowColor="#000000"
-                        android:shadowDx="5"
-                        android:shadowDy="5"
-                        android:shadowRadius="5"
-                        android:text="Practice Exercises"
-                        android:textColor="#FFFFFF"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="@+id/backButton4"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/backButton4"
+                    android:layout_width="84dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:contentDescription="@string/back_button"
+                    android:minHeight="48dp"
+                    android:onClick="onClickBackToMain"
+                    android:src="@drawable/back_button"
+                    app:layout_constraintBottom_toTopOf="@+id/pageTitle4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="RedundantDescriptionCheck" />
 
-                    <ImageView
-                        android:id="@+id/subPageLogo4"
-                        android:layout_width="68dp"
-                        android:layout_height="51dp"
-                        android:layout_marginTop="20dp"
-                        android:contentDescription="@string/app_logo"
-                        android:src="@drawable/app_logo"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/pageTitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="5"
+                    android:text="Practice Exercises"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/backButton4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/subPageLogo4"
+                    android:layout_width="68dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@string/app_logo"
+                    android:src="@drawable/app_logo"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     <ScrollView
@@ -84,8 +84,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView1"
@@ -108,12 +108,12 @@
                         android:id="@+id/youtubePlayer1"
                         android:layout_width="240dp"
                         android:layout_height="120dp"
-                        android:layout_marginStart="160dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="50dp"
-                        android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/videoDescription"
                         app:layout_constraintTop_toTopOf="parent"
                         app:videoId="xxzDtLqZBro">
 
@@ -123,36 +123,31 @@
                         android:id="@+id/videoTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="280dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/workout_1"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.315"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.004" />
+                        app:layout_constraintVertical_bias="0.006" />
 
                     <TextView
                         android:id="@+id/videoDescription"
-                        android:layout_width="match_parent"
+                        android:layout_width="95dp"
                         android:layout_height="155dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="270dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="25dp"
                         android:layout_marginBottom="46dp"
-                        android:text="Use this video three times this week and progress to Otago Workout #2."
+                        android:text="Use this video three times this week, then start Workout #2."
                         android:textColor="#FFFFFF"
-                        android:textSize="13.5sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/videoTitle"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintVertical_bias="0.23" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -179,45 +174,43 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:layout_marginEnd="280dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/workout_2"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.041"
+                        app:layout_constraintHorizontal_bias="0.473"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.068" />
+                        app:layout_constraintVertical_bias="0.03" />
 
                     <TextView
                         android:id="@+id/videoDescription2"
-                        android:layout_width="match_parent"
+                        android:layout_width="95dp"
                         android:layout_height="155dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginEnd="270dp"
-                        android:text="Use this video three times per week and progress to Otago Workout #3."
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="46dp"
+                        android:text="Use this video three times per week, then progress to  Workout #3."
                         android:textColor="#FFFFFF"
-                        android:textSize="13.5sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/videoTitle2"
                         app:layout_constraintVertical_bias="0.409" />
 
                     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                         android:id="@+id/youtubePlayer2"
                         android:layout_width="240dp"
                         android:layout_height="120dp"
-                        android:layout_marginStart="160dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="50dp"
-                        android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/videoDescription2"
                         app:layout_constraintTop_toTopOf="parent"
                         app:videoId="gO74v4VnfX4">
 
@@ -248,45 +241,44 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:layout_marginEnd="280dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/workout_3"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_bias="0.473"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.068" />
+                        app:layout_constraintVertical_bias="0.0" />
 
                     <TextView
                         android:id="@+id/videoDescription3"
-                        android:layout_width="match_parent"
+                        android:layout_width="95dp"
                         android:layout_height="155dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginEnd="270dp"
-                        android:text="Use this video three times this week and progress to Otago Workout #4."
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="46dp"
+                        android:text="Use this video three times this week, then progress to  Workout #4."
                         android:textColor="#FFFFFF"
-                        android:textSize="13.5sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.504" />
+                        app:layout_constraintTop_toBottomOf="@+id/videoTitle3" />
 
                     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                         android:id="@+id/youtubePlayer3"
                         android:layout_width="240dp"
                         android:layout_height="120dp"
-                        android:layout_marginStart="160dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="50dp"
-                        android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/videoDescription3"
                         app:layout_constraintTop_toTopOf="parent"
                         app:videoId="4iugjk9AbN8">
 
@@ -299,47 +291,49 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="11dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginBottom="60dp"
                 app:cardBackgroundColor="#474545"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/videoDesription4"
-                        android:layout_width="match_parent"
+                        android:layout_width="95dp"
                         android:layout_height="155dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="25dp"
                         android:layout_marginEnd="270dp"
-                        android:text="Use this video three times per week."
+                        android:layout_marginBottom="46dp"
+                        android:text="Use this video three times per week. Then repeat workout 1-4  weekly."
                         android:textColor="#FFFFFF"
-                        android:textSize="13.5sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.609" />
+                        app:layout_constraintTop_toBottomOf="@+id/videoTitle5" />
 
                     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                         android:id="@+id/youtubePlayer4"
                         android:layout_width="240dp"
                         android:layout_height="120dp"
-                        android:layout_marginStart="160dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="40dp"
                         android:layout_marginEnd="50dp"
                         android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/videoDesription4"
                         app:layout_constraintTop_toTopOf="parent"
                         app:videoId="4iugjk9AbN8"
                         tools:ignore="MissingConstraints">
@@ -350,17 +344,14 @@
                         android:id="@+id/videoTitle5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="280dp"
                         android:text="@string/workout_4"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.068" />
+                        app:layout_constraintVertical_bias="0.092" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

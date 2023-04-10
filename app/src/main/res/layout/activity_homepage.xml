@@ -31,13 +31,23 @@
                     android:id="@+id/GetMovinLogoText"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="10dp"
                     android:text="@string/getmovin"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="34sp"
                     android:textStyle="bold"
-                    app:drawableRightCompat="@drawable/app_logo" />
+                    />
+
+                <ImageView
+                    android:id="@+id/subPageLogo"
+                    android:layout_width="68dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_logo"
+                    android:src="@drawable/app_logo"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </LinearLayout>
 
@@ -49,7 +59,7 @@
                 android:id="@+id/achivementsBtn"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="7dp"
                 android:background="@null"
                 android:layout_gravity="center_horizontal"
@@ -68,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="52dp"
+                android:layout_marginBottom="25dp"
                 android:contentDescription="@string/achievements_textmain"
                 android:onClick="achievementsClick"
                 android:text="@string/achievements_text"
@@ -114,7 +124,7 @@
                 android:text="@string/completed_exercises_button"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
-                android:textSize="32sp" />
+                android:textSize="30sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/howToUseTheAppButton"
