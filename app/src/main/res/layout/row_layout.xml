@@ -10,6 +10,7 @@
       android:id="@+id/videoTitle7"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
       android:shadowColor="#000000"
       android:shadowDx="5"
       android:shadowDy="5"

@@ -108,11 +108,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView1"
                 android:layout_width="411dp"
                 android:layout_height="230dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 app:cardBackgroundColor="#474545"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints"
@@ -146,7 +147,7 @@
                         android:layout_height="140dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="20dp"
-                        android:layout_marginEnd="50dp"
+                        android:layout_marginEnd="60dp"
                         android:text="Tap the ‘back’ button in the top right corner of this screen. Now you are on the home screen. Next, tap the orange ‘practice exercises’ button, you’ll then see a list of different exercise videos. watch a video, click the red play button on the video you would like to watch. Click the video name to be brought to the YouTube app, if you’d prefer to watch it there!"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
@@ -236,7 +237,7 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="40dp"
                         android:layout_marginBottom="170dp"
-                        android:text="Q: What are the achievements for, and how do I see my achievements?"
+                        android:text="Q: What are the achievements for? How do I see my achievements?"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -304,7 +305,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="40dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginEnd="40dp"
                         android:layout_marginBottom="180dp"
                         android:text="Q: Why should I continue to do these exercises?"
