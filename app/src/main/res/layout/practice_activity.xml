@@ -54,7 +54,7 @@
                     android:shadowRadius="5"
                     android:text="Practice Exercises"
                     android:textColor="#FFFFFF"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/backButton4"
                     app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/videoDescription"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:videoId="xxzDtLqZBro">
+                        app:videoId="RmZO_EPoB4k">
 
                     </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
 
@@ -280,7 +280,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/videoDescription3"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:videoId="4iugjk9AbN8">
+                        app:videoId="xxzDtLqZBro">
 
                     </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
 
@@ -335,7 +335,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/videoDesription4"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:videoId="4iugjk9AbN8"
+                        app:videoId="ZdJAsPqPqzs"
                         tools:ignore="MissingConstraints">
 
                     </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>

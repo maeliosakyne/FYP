@@ -43,7 +43,7 @@ public class PracticeExercises extends AppCompatActivity {
 
         //Initializing shared preference
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        videoIds = new String[]{"xxzDtLqZBro", "gO74v4VnfX4", "4iugjk9AbN8", "4iugjk9AbN8"};
+        videoIds = new String[]{"RmZO_EPoB4k", "gO74v4VnfX4", "xxzDtLqZBro", "ZdJAsPqPqzs"};
         youTubePlayerView = findViewById(R.id.youtubePlayer1);
         youTubePlayerView2 = findViewById(R.id.youtubePlayer2);
         youTubePlayerView3 = findViewById(R.id.youtubePlayer3);
@@ -367,13 +367,13 @@ public class PracticeExercises extends AppCompatActivity {
     }
 
   private void checkAchievements() {
-    //Achievement 1 will be unlocked when first video is watched
+    //Achievement 1: Shown first video will be unlocked
     if (!sharedpreferences.getBoolean("firstAchievementUnlock", false)) {
       editor.putBoolean("firstAchievementUnlock", true);
       editor.apply();
     }
 
-    // Achievement 2: First week of exercises completed
+    // Achievement 2: First week of exercises
     if (sharedpreferences.contains("weeksNumber")) {
       List<String> weekList = Arrays.asList(sharedpreferences.getString("weeksNumber", "").split(","));
       if (weekList.size() >= 2 && calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(weekList.get(weekList.size() - 1))) {
