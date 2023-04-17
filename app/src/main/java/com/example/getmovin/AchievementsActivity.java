@@ -38,7 +38,7 @@ public class AchievementsActivity extends AppCompatActivity {
             }
             //Finish the activity of back button click
         });
-
+        //remove views
         parentPanel.removeAllViews();
 
         // Set the orientation of the parent LinearLayout
@@ -49,10 +49,10 @@ public class AchievementsActivity extends AppCompatActivity {
 
         // Check if the first achievement has been unlocked
         if(sharedpreferences.getBoolean("firstAchievementUnlock",false))
-        { // If so, inflate the achievement layout
+        { // If so, inflate the achievement layout to show trophy image and achievement text
           View item = inflater.inflate(R.layout.row_achievement_lyt, null);
 
-          // Find the ImageView and TextView in the layout
+          // Find the ImageView and TextView in the layout, row_achievement_lyt
           ImageView imageView = item.findViewById(R.id.trophy_icon);
           TextView textView= item.findViewById(R.id.leve_txt);
 

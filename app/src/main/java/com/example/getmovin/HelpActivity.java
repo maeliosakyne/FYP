@@ -5,6 +5,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+//Android studio code
 public class HelpActivity extends AppCompatActivity {
 
     @Override

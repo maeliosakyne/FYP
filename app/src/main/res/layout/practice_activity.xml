@@ -29,7 +29,7 @@
                     android:layout_marginStart="280dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@null"
+                    android:background="#EE5315"
                     android:contentDescription="@string/back_button"
                     android:minHeight="48dp"
                     android:onClick="onClickBackToMain"
@@ -306,7 +306,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/videoDesription4"
+                        android:id="@+id/videoDescription4"
                         android:layout_width="95dp"
                         android:layout_height="155dp"
                         android:layout_marginStart="4dp"
@@ -333,7 +333,7 @@
                         android:layout_marginBottom="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/videoDesription4"
+                        app:layout_constraintStart_toEndOf="@+id/videoDescription4"
                         app:layout_constraintTop_toTopOf="parent"
                         app:videoId="ZdJAsPqPqzs"
                         tools:ignore="MissingConstraints">

@@ -54,14 +54,14 @@ public class PracticeExercises extends AppCompatActivity {
         cardView4 = findViewById(R.id.cardView4);
         editor = sharedpreferences.edit();
 
-        //Function to check that if videos are in completed videos then not shown in practice video list
+        //Function to check if the videos are in completed videos, if they are then they're not shown in practice video list
         checkVideosVisibility();
 
         //Youtube Video Player 1 listener
         youTubePlayerView.addYouTubePlayerListener(new YouTubePlayerListener() {
           @Override
           public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-          //If Video is shown completely then store its video id in shared preference
+          //If full duration of video is watched then store its video id in shared preference
           }
 
           @Override
@@ -71,7 +71,7 @@ public class PracticeExercises extends AppCompatActivity {
               String joined = sharedpreferences.getString("videoIds", "");
               if(joined.isEmpty())
               {
-                //If the list of completed list in shared preference is empty
+                //If the list of completed exercises in shared preferences is empty
                 List<String> list = new ArrayList<String>();
                 list.add(videoIds[0]);
                 joined = String.join(",", list);
@@ -80,7 +80,7 @@ public class PracticeExercises extends AppCompatActivity {
               }
               else {
                 //If the list of completed exercises in shared preference is not empty then
-                // first get the list and then add new video id and then store the updated list in shared preference
+                // first get the list and then add new video id to the list, and then store the updated list in shared preferences
                 List<String> list = new ArrayList<String>(Arrays.asList(joined.split(","))); // convert back to list of strings
                 list.add(videoIds[0]);
                 joined = String.join(",", list);
@@ -367,13 +367,13 @@ public class PracticeExercises extends AppCompatActivity {
     }
 
   private void checkAchievements() {
-    //Achievement 1: Shown first video will be unlocked
+    //Achievement 1: Unlocked if workout 1 is watched fully
     if (!sharedpreferences.getBoolean("firstAchievementUnlock", false)) {
       editor.putBoolean("firstAchievementUnlock", true);
       editor.apply();
     }
 
-    // Achievement 2: First week of exercises
+    // Achievement 2: Unlocked if user completes full week of exercises
     if (sharedpreferences.contains("weeksNumber")) {
       List<String> weekList = Arrays.asList(sharedpreferences.getString("weeksNumber", "").split(","));
       if (weekList.size() >= 2 && calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(weekList.get(weekList.size() - 1))) {
@@ -388,7 +388,7 @@ public class PracticeExercises extends AppCompatActivity {
     }
 
 
-    // Achievement 3, 4 and 5: Consecutive weeks of exercises
+    // Achievement 3, 4 and 5: Unlocked for consecutive weeks of exercise (2 weeks, 1 month and 2 months)
     if (sharedpreferences.contains("weeksNumber")) {
       List<String> weekList = Arrays.asList(sharedpreferences.getString("weeksNumber", "").split(","));
       if (weekList.size() >= 2) {
@@ -409,10 +409,10 @@ public class PracticeExercises extends AppCompatActivity {
           }
           if (weekList.size() >= 4 && calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(weekList.get(weekList.size() - 1))) {
             // User has been practicing for over a month
-            if (!sharedpreferences.getBoolean("forthAchievementUnlock", false)) {
+            if (!sharedpreferences.getBoolean("fourthAchievementUnlock", false)) {
               // Unlock Achievement 4
               SharedPreferences.Editor editor = sharedpreferences.edit();
-              editor.putBoolean("forthAchievementUnlock", true);
+              editor.putBoolean("fourthAchievementUnlock", true);
               editor.apply();
             }
             if (weekList.size() >= 8 && calender.get(Calendar.WEEK_OF_YEAR) == Integer.parseInt(weekList.get(weekList.size() - 1))) {
